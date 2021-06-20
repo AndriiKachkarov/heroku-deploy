@@ -170,7 +170,7 @@ if (heroku.dockerBuildArgs) {
     .map((arg) => `${arg}="${process.env[arg]}"`)
     .join(",");
   heroku.dockerBuildArgs = heroku.dockerBuildArgs
-    ? `--arg ${heroku.dockerBuildArgs}`
+    ? `--build-arg ${heroku.dockerBuildArgs}`
     : "";
 }
 
